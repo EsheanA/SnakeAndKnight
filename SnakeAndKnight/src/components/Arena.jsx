@@ -16,7 +16,7 @@ export function Arena() {
       
     return (
     <>
-        <WallX height = {height} rowIndex={-1*floorHeight/2} />
+        <WallX height = {height} rowIndex={-1*floorHeight/2 + 0.25} />
 
         <WallY height = {height} rowIndex={-1*floorHeight/2-1} />
         {floor()}

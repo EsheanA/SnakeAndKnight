@@ -17,9 +17,7 @@ export default function useEventListeners() {
         event.preventDefault();
         queueMove("right");
       }
-    //   else if(event.key === "Space"){
-    //     console.log("Jump!");
-    //   }
+
     };
 
     window.addEventListener("keydown", handleKeyDown);
