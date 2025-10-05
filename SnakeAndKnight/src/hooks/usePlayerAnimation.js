@@ -3,6 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { state, stepCompleted } from "../stores/player";
 import { tileSize } from "../data/constants";
 
+
 export default function usePlayerAnimation(ref) {
     const moveClock = new THREE.Clock(false);
 
@@ -13,12 +14,12 @@ export default function usePlayerAnimation(ref) {
 
         if (!moveClock.running) moveClock.start();
 
-        const stepTime = 0.2; // Seconds it takes to take a step
+        const stepTime = 0.15; 
         const progress = Math.min(
             1,
             moveClock.getElapsedTime() / stepTime
         );
-
+       
         setPosition(player, progress);
         setRotation(player, progress);
 
@@ -43,7 +44,7 @@ function setPosition(player, progress) {
 
     player.position.x = THREE.MathUtils.lerp(startX, endX, progress);
     player.position.y = THREE.MathUtils.lerp(startY, endY, progress);
-    // player.position.z = Math.sin(progress * Math.PI) * 8;
+    player.position.z = Math.sin(progress * Math.PI) * 8;
 }
 
 function setRotation(player, progress) {
