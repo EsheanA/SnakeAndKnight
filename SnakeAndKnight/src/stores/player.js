@@ -22,5 +22,4 @@ export const state = {
     if (direction === "backward") state.currentRow -= 1;
     if (direction === "left") state.currentTile -= 1;
     if (direction === "right") state.currentTile += 1;
-    // if (direction === "jump") state.currentHeight += 1;
   }

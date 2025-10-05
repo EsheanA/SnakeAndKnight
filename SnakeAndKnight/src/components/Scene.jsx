@@ -8,8 +8,7 @@ export const Scene = ({ children }) => {
       camera={{
         up: [0, 0, 1],
         // position: [-300, -300, 300],
-        position: [50, -200, 100]
-
+        position: [50, -200, 100],
       }}
     >
       <ambientLight />
