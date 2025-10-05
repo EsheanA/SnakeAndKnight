@@ -1,7 +1,7 @@
 import { Bounds } from "@react-three/drei";
 import { useRef, useEffect } from "react";
 import { useThree } from "@react-three/fiber";
-import usePlayerAnimation from "../hooks/usePlayerAnimation";
+import usePlayerAnimation from "../hooks/PlayerHooks/usePlayerAnimation";
 
 export function Player() {
   const player = useRef(null);

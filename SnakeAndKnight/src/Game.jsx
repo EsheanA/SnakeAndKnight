@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { tileSize } from "./data/constants";
 import { Apple } from "./components/Apple";
 import { Player } from "./components/Player";
@@ -10,7 +10,7 @@ import { state } from "./stores/player"; // where you store current position
 import { Snake } from "./components/Snake"
 import { Controls } from "./components/Controls";
 import { useEffect, useState } from "react";
-import useEventListeners from "./hooks/useEventListeners";
+import useEventListeners from "./hooks/PlayerHooks/useEventListeners";
 import "./Game.css";
 
 export default function Game() {
@@ -59,7 +59,6 @@ export default function Game() {
             <Apple key={i} start={apple.start} end={apple.end} />
           ))}
         </Scene>
-        <Controls /> 
         </>
         :
 

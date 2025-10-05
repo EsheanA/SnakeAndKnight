@@ -77,16 +77,34 @@ export function useApples() {
       new THREE.SphereGeometry(3, 16, 16),
       new THREE.MeshStandardMaterial({ color: "red" })
     );
+
+
+    const newRow = currentRow + dy;
+    const newTile = currentTile+dx;
     scene.add(mesh);
+
+    
+
+
 
     applesRef.current.push({
       mesh,
+      row: newRow,
+      tile: newTile,
       start,
       end,
       progress: 0,
       duration: 0.5, // seconds
     });
+
   }
 
-  return { throwApple };
+  function getApplePositions(){
+    return applesRef.current.map(a => ({
+      ro: a.row,
+      title: a.title
+    }));
+  }
+
+  return { throwApple, getApplePositions };
 }
