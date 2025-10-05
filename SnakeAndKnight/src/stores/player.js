@@ -9,7 +9,7 @@ export const state = {
     const validMove = endsUpInValidPosition({ rowIndex: state.currentRow, tileIndex: state.currentTile },
       [...state.movesQueue, direction]);
   if(!validMove)
-      return
+      return;
     if(state.movesQueue <= 5){
       state.movesQueue.push(direction);
     }
@@ -18,7 +18,6 @@ export const state = {
   
   export function stepCompleted() {
     const direction = state.movesQueue.shift();
-    console.log("woo")
     if (direction === "forward") state.currentRow += 1;
     if (direction === "backward") state.currentRow -= 1;
     if (direction === "left") state.currentTile -= 1;
