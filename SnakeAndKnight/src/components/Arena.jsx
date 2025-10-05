@@ -5,6 +5,7 @@ import {WallY} from "./WallY"
 import { floorHeight, floorWidth} from "../data/constants";
 
 export function Arena() {
+    const height = 40;
     const floor = () => {
         const tiles = [];
         for (let i = -floorHeight/2; i <= floorHeight/2; i++) {
@@ -15,13 +16,13 @@ export function Arena() {
       
     return (
     <>
-        <WallX height = {80} rowIndex={-1*floorHeight/2} />
+        <WallX height = {height} rowIndex={-1*floorHeight/2} />
 
-        <WallY height = {80} rowIndex={-1*floorHeight/2-1} />
+        <WallY height = {height} rowIndex={-1*floorHeight/2-1} />
         {floor()}
-        <WallY height = {80} rowIndex={floorHeight/2+1} />
+        <WallY height = {height} rowIndex={floorHeight/2+1} />
 
-        <WallX height = {80} rowIndex={floorHeight/2} />
+        <WallX height = {height} rowIndex={floorHeight/2} />
     </>
   );
 }
