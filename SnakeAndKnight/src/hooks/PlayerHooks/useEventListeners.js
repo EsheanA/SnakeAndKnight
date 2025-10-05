@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { queueMove } from "../stores/player";
+import { queueMove } from "../../stores/player";
 
 export default function useEventListeners({ throwApple }) {
   useEffect(() => {

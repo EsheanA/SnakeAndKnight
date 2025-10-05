@@ -1,4 +1,4 @@
-import useEventListeners from "../hooks/useEventListeners";
+import useEventListeners from "../hooks/PlayerHooks/useEventListeners";
 import "./Controls.css";
 
 export function Controls() {
