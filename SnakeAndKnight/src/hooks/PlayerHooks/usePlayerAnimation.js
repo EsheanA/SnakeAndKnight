@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
-import { state, stepCompleted } from "../stores/player";
-import { tileSize } from "../data/constants";
+import { state, stepCompleted } from "../../stores/player";
+import { tileSize } from "../../data/constants";
 
 
 export default function usePlayerAnimation(ref) {
@@ -44,7 +44,7 @@ function setPosition(player, progress) {
 
     player.position.x = THREE.MathUtils.lerp(startX, endX, progress);
     player.position.y = THREE.MathUtils.lerp(startY, endY, progress);
-    player.position.z = Math.sin(progress * Math.PI) * 8;
+    player.position.z = Math.sin(progress * Math.PI) * 16;
     
 }
 

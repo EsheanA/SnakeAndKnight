@@ -3,9 +3,26 @@ export const state = {
     currentRow: 0,
     currentTile: 0,
     movesQueue: [],
+    game: true
   };
+  window.addEventListener("resetGameState", ()=>{
+    state.currentRow = 0;
+    state.currentTile = 0;
+  })
+
+  export function setGameState(stat){
+    state.game = stat;
+  }
+
   
+  export function getPlayerPosition(){
+    return({currentRow: state.currentRow, currentTile: state.currentTile})
+  }
   export function queueMove(direction) {
+    if(!state.game){
+      window.dispatchEvent(new Event("gameOver"));
+      return;
+    }
     const validMove = endsUpInValidPosition({ rowIndex: state.currentRow, tileIndex: state.currentTile },
       [...state.movesQueue, direction]);
   if(!validMove)

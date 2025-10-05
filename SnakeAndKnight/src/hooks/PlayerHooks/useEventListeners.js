@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { queueMove } from "../stores/player";
+import { queueMove } from "../../stores/player";
 
 export default function useEventListeners() {
   useEffect(() => {
@@ -17,7 +17,6 @@ export default function useEventListeners() {
         event.preventDefault();
         queueMove("right");
       }
-
     };
 
     window.addEventListener("keydown", handleKeyDown);

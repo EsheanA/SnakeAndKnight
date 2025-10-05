@@ -11,6 +11,5 @@ export function endsUpInValidPosition(currentPosition, moves) {
   }
   console.log(finalPosition);
 
-  return true
-
+  return true;
 }
