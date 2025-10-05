@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import { queueMove } from "../stores/player";
+import { useApples } from "./useApples";
 
 export default function useEventListeners({ throwApple }) {
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "w") {
@@ -20,4 +22,6 @@ export default function useEventListeners({ throwApple }) {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [throwApple]);
+
+  return null;
 }

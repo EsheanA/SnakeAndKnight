@@ -1,25 +1,3 @@
-// import { useFrame } from "@react-three/fiber";
-// import * as THREE from "three";
-
-// export function useAppleAnimation(applesRef) {
-//   useFrame((_, delta) => {
-//     for (const apple of applesRef.current) {
-//       apple.progress += delta / apple.duration;
-//       const p = Math.min(apple.progress, 1);
-
-//       // interpolate position
-//       const pos = new THREE.Vector3().lerpVectors(apple.start, apple.end, p);
-//       pos.z += Math.sin(p * Math.PI) * 12; // add arc
-//       apple.mesh.position.copy(pos);
-
-//       if (p >= 1) {
-//         // optional: stop or remove apple
-//         apple.mesh.position.copy(apple.end);
-//       }
-//     }
-//   });
-// }
-
 // useAppleAnimation.js
 import { useFrame } from "@react-three/fiber";
 

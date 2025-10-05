@@ -1,4 +1,5 @@
 import { Canvas } from "@react-three/fiber";
+import useEventListeners from "../hooks/useEventListeners";
 
 export const Scene = ({ children }) => {
   return (
@@ -7,7 +8,6 @@ export const Scene = ({ children }) => {
       orthographic={true}
       camera={{
         up: [0, 0, 1],
-        // position: [-300, -300, 300],
         position: [50, -200, 100],
       }}
     >
